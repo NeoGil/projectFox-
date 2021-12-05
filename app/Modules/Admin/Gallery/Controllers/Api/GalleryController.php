@@ -2,20 +2,34 @@
 
 namespace App\Modules\Admin\Gallery\Controllers\Api;
 
+use App\Modules\Admin\Dashboard\Classes\Base;
 use App\Modules\Admin\Gallery\Models\Gallery;
+use App\Modules\Admin\Gallery\Services\GalleryService;
+use App\Services\Response\ResponseServise;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
-class GalleryController extends Controller
+class GalleryController extends Base
 {
+    /**
+     * RoleController constructor.
+     * @param GalleryService $galleryService
+     */
+    public function __construct(GalleryService $galleryService)
+    {
+        parent::__construct();
+        $this->service = $galleryService;
+    }
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function index()
     {
-        //
+
+        return ResponseServise::sendJsonResponse(true, 200,[],[
+            'items' =>  $this->service->getSources()
+        ]);
     }
 
     /**
@@ -43,11 +57,13 @@ class GalleryController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Modules\Admin\Gallery\Models\Gallery  $gallery
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function show(Gallery $gallery)
     {
-        //
+        return ResponseServise::sendJsonResponse(true, 200, [],[
+            'item' => $gallery
+        ]);
     }
 
     /**
