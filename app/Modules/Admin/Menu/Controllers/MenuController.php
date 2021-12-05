@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Modules\Admin\Users\Controllers;
+namespace App\Modules\Admin\Menu\Controllers;
 
-use App\Modules\Admin\Users\Models\User;
+use App\Modules\Admin\Menu\Models\Menu;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class UsersController extends Controller
+class MenuController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,6 @@ class UsersController extends Controller
     public function index()
     {
         //
-
     }
 
     /**
@@ -43,10 +42,10 @@ class UsersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Modules\Admin\Users\Models\User  $user
+     * @param  \App\Modules\Admin\Menu\Models\Menu  $menu
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(Menu $menu)
     {
         //
     }
@@ -54,10 +53,10 @@ class UsersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Modules\Admin\Users\Models\User  $user
+     * @param  \App\Modules\Admin\Menu\Models\Menu  $menu
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(Menu $menu)
     {
         //
     }
@@ -66,10 +65,10 @@ class UsersController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Modules\Admin\Users\Models\User  $user
+     * @param  \App\Modules\Admin\Menu\Models\Menu  $menu
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, Menu $menu)
     {
         //
     }
@@ -77,10 +76,10 @@ class UsersController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Modules\Admin\Users\Models\User  $user
+     * @param  \App\Modules\Admin\Menu\Models\Menu  $menu
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(Menu $menu)
     {
         //
     }

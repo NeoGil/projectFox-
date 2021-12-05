@@ -11,6 +11,7 @@ class User extends AuthUser
     use HasFactory, HasApiTokens;
 
     protected $fillable = [
+        'firstname',
         'email'
 
     ];
