@@ -21,6 +21,7 @@ return [
         ],
 
         'Pub' => [
+            'Gallery',
             'Auth',
         ],
     ]

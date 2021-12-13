@@ -16,9 +16,9 @@ class CreateAdminUser extends Seeder
     {
         //
         DB::table('users')->insert([
-            'firstname'=>'admin',
-            'email'=>'admin@lol.com',
-            'password'=>bcrypt('admin'),
+            'firstname'=>'',
+            'email'=>'',
+            'password'=>bcrypt(''),
             'status' => 1
         ]);
     }
